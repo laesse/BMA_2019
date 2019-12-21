@@ -2,7 +2,7 @@ class Bedroom extends Phaser.Scene {
 
 
     constructor() {
-        super({key: "Example1"})
+        super({key: "bedroom"})
     }
 
     preload() {
@@ -11,6 +11,7 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles3', 'assets/interior.png');
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
+        this.load.plugin('DialogModalPlugin', './dialog_plugin.js');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-map.json');
         this.load.spritesheet('player1',
             'assets/playerSprite.png',
@@ -39,6 +40,9 @@ class Bedroom extends Phaser.Scene {
         // has to be set in Tiled
         // this.topLayer.setCollisionByProperty({ collides: true }); TODO seems like its not working
 
+        // this.sys.install('DialogModalPlugin');
+        // console.log(this.sys.dialogModal);
+        // this.sys.dialogModal.init();
 
         this.player.body.collideWorldBounds = true;
 
@@ -66,7 +70,7 @@ class Bedroom extends Phaser.Scene {
         }
 
         if (this.interactionKey.SPACE.isDown) {
-            //TODO AddAction
+            interact(this.player.x, this.player.y, this)
         }
 
     }
