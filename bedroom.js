@@ -3,7 +3,7 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
     constructor() {
-        super({ key: "bedroom" })
+        super({key: "bedroom"})
     }
 
     preload() {
@@ -14,9 +14,6 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.plugin('DialogModalPlugin', './dialog_plugin.js');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-map.json');
-        this.load.image('gameTiles6', 'assets/pc.png');
-        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
-
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
             {
