@@ -13,8 +13,61 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
+
         this.load.spritesheet('player1',
             'assets/playerSpriteGreen.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+
+        this.load.spritesheet('playerback',
+            'assets/back.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerbackwalking1',
+            'assets/backwalking1.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerbackwalking2',
+            'assets/backwalking2.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+
+        this.load.spritesheet('playerfront',
+            'assets/front.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerfrontwalking1',
+            'assets/frontwalking1.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerfrontwalking2',
+            'assets/frontwalking2.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+
+        this.load.spritesheet('playerleft',
+            'assets/back.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerleftwalking1',
+            'assets/leftwalking1.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerleftwalking2',
+            'assets/leftwalking2.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+
+        this.load.spritesheet('playerright',
+            'assets/right.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerrightwalking1',
+            'assets/rightwalking1.png',
+            {frameWidth: 32, frameHeight: 36}
+        );
+        this.load.spritesheet('playerrightwalking2',
+            'assets/rightwalking2.png',
             {frameWidth: 32, frameHeight: 36}
         );
 
@@ -35,7 +88,7 @@ class Bedroom extends Phaser.Scene {
         this.middleLayer2 = this.map.createDynamicLayer('edge', [tileset4, tileset2, tileset3, tileset1]);
         this.topLayer = this.map.createDynamicLayer('blocked', [tileset4, tileset2, tileset3, tileset1, tileset5, tileset6]);
         // Character
-        this.player = this.physics.add.sprite(325, 325, "player1", "assets/playerSpriteGreen.png");
+        this.player = this.physics.add.sprite(325, 325, "playerfornt", "assets/front.png");
         //collision with wall & Objects
         this.topLayer.setCollisionByProperty({ collides: true });
         this.topLayer.setCollisionBetween(1,9999);
@@ -57,15 +110,19 @@ class Bedroom extends Phaser.Scene {
         //
         if (this.moveKeys.W.isDown || this.moveKeys.UP.isDown) {
             this.player.body.velocity.y -= 150;
+            this.player.setFrame("assets/front.png")
         }
         if (this.moveKeys.S.isDown || this.moveKeys.DOWN.isDown) {
             this.player.body.velocity.y += 150;
+            this.player.setFrame("assets/back.png")
         }
         if (this.moveKeys.A.isDown || this.moveKeys.LEFT.isDown) {
             this.player.body.velocity.x -= 150;
+            this.player.setFrame("assets/left.png")
         }
         if (this.moveKeys.D.isDown || this.moveKeys.RIGHT.isDown) {
             this.player.body.velocity.x += 150;
+            this.player.setFrame("assets/right.png")
         }
 
         if (this.interactionKey.SPACE.isDown) {
