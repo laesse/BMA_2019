@@ -64,22 +64,18 @@ class Bedroom extends Phaser.Scene {
         if (this.moveKeys.W.isDown || this.moveKeys.UP.isDown) {
             this.player.body.velocity.y -= 150;
             this.player.setFrame(0);
-            // this.player.loadTexture("assets/front.png")
         }
         if (this.moveKeys.S.isDown || this.moveKeys.DOWN.isDown) {
             this.player.body.velocity.y += 150;
             this.player.setFrame(3);
-            // this.player.loadTexture("assets/back.png")
         }
         if (this.moveKeys.A.isDown || this.moveKeys.LEFT.isDown) {
             this.player.body.velocity.x -= 150;
             this.player.setFrame(6);
-            // this.player.loadTexture("assets/left.png")
         }
         if (this.moveKeys.D.isDown || this.moveKeys.RIGHT.isDown) {
             this.player.body.velocity.x += 150;
             this.player.setFrame(9);
-            // this.player.loadTexture("assets/right.png")
         }
 
         if (this.interactionKey.SPACE.isDown) {
