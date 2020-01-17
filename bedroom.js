@@ -43,6 +43,8 @@ class Bedroom extends Phaser.Scene {
         // this.sys.install('DialogModalPlugin');
         // console.log(this.sys.dialogModal);
         // this.sys.dialogModal.init();
+        this.plugins.install('DialogModalPlugin');
+        // this.dialogPlugin = this.plugins.get('DialogModalPlugin');
 
         this.player.body.collideWorldBounds = true;
 

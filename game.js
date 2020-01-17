@@ -10,13 +10,13 @@ var config = {
             gravity: {y: 0}
         }
     },
+    plugins: [ 'DialogModalPlugin' ],
     scene: [ Bedroom ],
     extend: {
         moveKeys: null,
         player: null,
         interactionKey : null
     },
-
 };
 
 var game = new Phaser.Game(config);
