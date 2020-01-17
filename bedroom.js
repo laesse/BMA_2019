@@ -3,7 +3,7 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
     constructor() {
-        super({key: "bedroom"})
+        super({ key: "bedroom" })
     }
 
     preload() {
@@ -12,14 +12,11 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles3', 'assets/interior.png');
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
-<<<<<<< HEAD
         this.load.plugin('DialogModalPlugin', './dialog_plugin.js');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-map.json');
-=======
         this.load.image('gameTiles6', 'assets/pc.png');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
 
->>>>>>> f1556fd65bf62273c5ff6a638ff80ccb8dcdbbb0
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
             {
@@ -47,28 +44,15 @@ class Bedroom extends Phaser.Scene {
         this.middleLayer2 = this.map.createDynamicLayer('edge', [tileset4, tileset2, tileset3, tileset1]);
         this.topLayer = this.map.createDynamicLayer('blocked', [tileset4, tileset2, tileset3, tileset1, tileset5, tileset6]);
         // Character
-<<<<<<< HEAD
-        this.player = this.physics.add.sprite(325, 325, "player1", "assets/playerSprite.png");
-        const spawnPoint = this.map.findObject("Objects", obj => obj.name === "Spawn Point");
-        // this.player = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, "player1", "assets/playerSprite.png"); TODO is this needed
-
-        // has to be set in Tiled
-        // this.topLayer.setCollisionByProperty({ collides: true }); TODO seems like its not working
-
-        // this.sys.install('DialogModalPlugin');
-        // console.log(this.sys.dialogModal);
-        // this.sys.dialogModal.init();
-        this.plugins.install('DialogModalPlugin');
-        // this.dialogPlugin = this.plugins.get('DialogModalPlugin');
-=======
         this.player = this.physics.add.sprite(325, 325, "player1", 0);
         //collision with wall & Objects
-        this.topLayer.setCollisionByProperty({collides: true});
+        this.topLayer.setCollisionByProperty({ collides: true });
         this.topLayer.setCollisionBetween(1, 9999);
         this.physics.add.collider(this.player, this.topLayer);
         this.middleLayer2.setCollisionBetween(1, 9999);
         this.physics.add.collider(this.player, this.middleLayer2);
->>>>>>> f1556fd65bf62273c5ff6a638ff80ccb8dcdbbb0
+        // pugins
+        this.plugins.install('DialogModalPlugin');
 
         this.player.body.collideWorldBounds = true;
 
