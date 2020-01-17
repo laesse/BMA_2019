@@ -3,7 +3,7 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
     constructor() {
-        super({key: "bedroom"})
+        super({ key: "bedroom" })
     }
 
     preload() {
