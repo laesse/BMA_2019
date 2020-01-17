@@ -1,14 +1,505 @@
 <html>
 <head>
-    <title>Posteingang(2020)</title>
+    <title>Emissionen der Digitalisierung(BMA 2020)</title>
     <meta lang="de">
     <meta charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Das Internet verursacht Emissionen, sowie auch alle anderen Technologien. Wir zeigen Ihenen, wo dass Sie ihren digitalen CO2-Fussabrdruck verbessern können.">
+    <meta name="author" content="bma_gruppe_4">
+
     <script src="phaser.js"></script>
     <script src="bedroom.js"></script>
     <script src="interaction.js"></script>
     <script src="game.js"></script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">.
+    <!-- Custom fonts for this theme -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/bma.css" rel="stylesheet">
+
 </head>
 <body>
+<div class="wrapper">
 <h1>BMA-GAME</h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">BMA Gruppe 4</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Spiel</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Infos</a>
+                    </li>
+					<li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#info">Über</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+
+
+
+            <!-- Masthead Heading -->
+            <h1 class="masthead-heading text-uppercase mb-0">Internet & CO2</h1>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Masthead Subheading -->
+            <p class="masthead-subheading font-weight-light mb-0">Eine Webseite mit Infos rund um Co2-Emissionen des Internets inklusive Awarness-Training Spiel</p>
+
+        </div>
+    </header>
+<section>
+
+</section>
+    <!-- Portfolio Section -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+
+            <!-- Portfolio Section Heading -->
+            <h2 id="gameTitle" class="page-section-heading text-center text-uppercase text-secondary mb-0">Spielen Sie unser Spiel zum Thema Co2-Emissionen im Alltag</h2>
+
+
+
+                <!-- Portfolio Item 4 -->
+                <div style="padding-top: 10px;">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalGame">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="page-section portfolio bg-primary text-white mb-0" id="about">
+		<div class="container">
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Infos</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+			<!--Infoboxes -->
+			<div class="row" style="text-align: -webkit-center;">
+				<!-- Info Item TV -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item " data-toggle="modal" data-target="#portfolioModalTV">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/tv.png" alt="">
+						</div>
+					</div>
+				</section>
+				<!-- Info Item SH -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item" data-toggle="modal" data-target="#portfolioModalSH">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+						</div>
+					</div>
+				</section>
+				<!-- Info Item YT -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item" data-toggle="modal" data-target="#portfolioModalYT">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/ytplay.png" alt="">
+						</div>
+					</div>
+				</section>
+				<!-- Info Item Porn -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item" data-toggle="modal" data-target="#portfolioModalP">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/p.png" alt="">
+						</div>
+					</div>
+				</section>
+				<!-- Info Item Mail -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item" data-toggle="modal" data-target="#portfolioModalmail">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/mail.png" alt="">
+						</div>
+					</div>
+				</section>
+				<!-- Info Item Cloud -->
+				<section class="page-section portfolio col-sm-6" id="portfolio">
+					<div class="container">
+						<div class="portfolio-item" data-toggle="modal" data-target="#portfolioModalcloud">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="img/portfolio/cloud.png" alt="">
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="info">
+        <div class="container">
+		<!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Über das Projekt</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+
+
+
+                <!-- Footer About Text -->
+                <div class="col-lg-6">
+					<h2>Unsere Maturarbeit</h2>
+					<p>Aus der Klimalaune heraus und dadurch das wir den aggressiven Aktivismus in Frage stellen, haben wir uns gefragt was eigentlich die Digitalisierung ins Sachen Klima so bewirkt.
+					<br> Darüber wird zwar nie gesprochen oder dagegen protestiert und dennoch sind es spannende Zahlen: z.B. verursachen digitale Technologien mehr Emissionen, 
+					als die zivile Luftfahrt, welche so oft angekreidet wird. Wir haben uns in die Thematik vertieft und versuchen nun im Rahmen unserer Maturarbeit mit dieser Plattform unsere Erkenntnisse weiterzugeben.
+					</p>
+					<div class="divider-custom divider-light">
+						<div class="divider-custom-line"></div>
+						<div class="divider-custom-icon">
+							<i class="fas fa-external-link-alt"></i>
+						</div>
+						<div class="divider-custom-line"></div>
+					</div>
+					<h2>Diese Webseite</h2>
+					<p>Die Grösse der Website inklusive Spiel beläuft sich auf 0.02 GB damit kann laut der EMPA-Studie von rund einer Wattstunde pro Benutzer ausgegangen werden</p>
+					<h2>Interessante Links</h2>
+					<ul>
+						<li><a href="https://theshiftproject.org/wp-content/uploads/2019/07/2019-02.pdf" target="_blank">Studie zu Online-Videos und deren Energieverbrauch von The Shift Project</a></li>
+						<li><a href="http://www.janavirgin.com/CO2/CO2GLE_about.html" target="_blank">CO2GLE - Soviel CO2 soll die Suchseite von Google verursachen</a></li>
+					</ul>
+                </div>
+				<div class="col-lg-6">
+					<h2>Quellen</h2>
+					<p>Es gibt nur begrenzt Informationen und Studien zu den "Emissionen des Internets". Wenn man dann noch von Quellen mit reisserischen Schlagzeilen absieht, bleiben nurnoch einige Studien und kleine Projekte.
+					Wir haben ausschliesslich nachvollziehbare Daten einbezogen und damit etwas Gegenwind zum künstlich angereicherten “Drama” geschaffen. 
+					Dies stellte uns vor eine schwierige Herausforderung, da gerade im Bereich des Energieverbrauchs und der Nachhaltigkeit die Grenzen der Kausalität nicht ganz klar sind. 
+					Welche Werte können in die Rechnung mit einbezogen werden, welche nicht? So wird bei Elektro-Autos manchmal die Produktion bis ins kleinste Detail hinzugerechnet, wenn es darum geht, ein Argument
+					gegen die Nachhaltigkeit der neuen Fahrzeugtechnologie zu bilden. Anders kann von Befürwortern lediglich die Nachhaltigkeit im Betrieb und nicht in der Produktion miteinbezogen werden.
+					So sahen wir während der Informationssammlung immer wieder, dass Angaben auf Firmenseiten zum eigenen Energieverbrauch oft sehr optimistisch sind. Jedoch zeigen Klima-Projekte dafür das Gegenteil,
+					so rechnete CO2GLE mit über 13kWh pro übertragenes Gigabyte, was zwar nicht direkt widerlegbar ist, jedoch geht die EMPA-Studie von 0.2kWh aus. Die Wahrheit wird irgendwo dazwischen liegen.</p>
+					
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <section class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; BMA Gruppe 4 2020</small>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Modals -->
+
+
+    <!-- Portfolio Modal Game -->
+    <div class="portfolio-modal modal fade" id="portfolioModalGame" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+
+                                <div id="phaser-example"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Info Modal tV -->
+	<div class="portfolio-modal modal fade" id="portfolioModalTV" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+                                <h1>Netflix & Chill?</h1>
+								<h3 style="margin-bottom:50px;">Immer mehr wird gestreamt und echte Serienmarathons sind im Trend</h3>
+								<p> Durch Netflix, Amazone Prime und andere Video on Demand wurden 2018 <b>102 Millionen Tonnen CO2</b> 
+								freigesetzt. Das ist soviel wie ganz Chile (dort findet 2025 die UN Klimawandelkonferenz statt) im selben Jahr. 
+								<br>Wie wärs stattdessen mit einem Gesellschaftsspiel zwischendurch oder einer netten Unterhaltung?</p>
+								<p>Wie kann das sein? - Wusstest du das für eine Minute Video Download/Streaming 0.2kWh bis 13kWh 
+								benötigt werden und damit durchschnittlich <b>0.1kg bis 7.07kg CO2</b> freigesetzt werden? </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Info Modal Smart Home -->
+	<div class="portfolio-modal modal fade" id="portfolioModalSH" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+                                <h1>Smart Home</h1>
+								<h3 style="margin-bottom:50px;">Das intelligente Zuhause, erschwinglich für jeden</h3>
+								<p> Die Heizung wird automatisiert oder von unterwegs per App gesteuert, die Haustür kann permanent auf dem Smartphone überwacht werden
+								und das Licht kann mit Sprachbefehlen an- und ausgeschalten werden.
+								<br>Wie wärs stattdessen mit einem Gesellschaftsspiel zwischendurch oder einer netten Unterhaltung?</p>
+								<p>Wie kann das sein? - Wusstest du das für eine Minute Video Download/Streaming 0.2kWh bis 13kWh 
+								benötigt werden und damit durchschnittlich <b>0.1kg bis 7.07kg CO2</b> freigesetzt werden? </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Info Modal YouTube -->
+	<div class="portfolio-modal modal fade" id="portfolioModalYT" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+                                <h1>YouTube</h1>
+								<h3 style="margin-bottom:50px;">Das intelligente Zuhause, erschwinglich für jeden</h3>
+								<p> Durch Netflix, Amazone Prime und andere Video on Demand wurden 2018 <b>102 Millionen Tonnen CO2</b> 
+								freigesetzt. Das ist soviel wie ganz Chile (dort findet 2025 die UN Klimawandelkonferenz statt) im selben Jahr. 
+								<br>Wie wärs stattdessen mit einem Gesellschaftsspiel zwischendurch oder einer netten Unterhaltung?</p>
+								<p>Wie kann das sein? - Wusstest du das für eine Minute Video Download/Streaming 0.2kWh bis 13kWh 
+								benötigt werden und damit durchschnittlich <b>0.1kg bis 7.07kg CO2</b> freigesetzt werden? </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Info modal Porn -->
+	<div class="portfolio-modal modal fade" id="portfolioModalP" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+                                <h1>Videos für Erwachsene</h1>
+								<h3 style="margin-bottom:50px;">3.5 kg CO2 pro Person jährlich von Pornos</h3>
+								<p>Es werden auf der Seite Pornhub laut ihren eigenen Angaben <b>jährlich ca. 100 Billionen Videos </b> angeschaut.
+								Auf die ganze Weltbevölkerung heruntergerechnet wären das folglich <b>12,5 Pornoclips pro Person.</b> <br>
+								Die übermittelte Datenmenge soll dadurch pro Person in etwa ein halbes Gigabyte betragen. Im durchschnitt verursacht der 
+								Energieaufwand zur Übermittlung dieser Datenmenge 3.5 Kilogramm CO2. <br><br> 
+								Wusstest du, dass im Jahr 2018 <b>0.2% der weltweiten Emissionen</b> durch online Videos mit pornografischem Inhalt entstanden? <br>
+								Ausserdem machen diese Filmchen <b>27 Prozent aller online Videos</b> aus!
+								Jedem seinen Spass, jedoch sollte man sich über die Folgen im Klaren sein.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Info modal Mail -->
+    <div class="portfolio-modal modal fade" id="portfolioModalMail" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+								<h1>Posteingang (<b>2020</b> ungelesene Mails)</h1>
+								<h3 style="margin-bottom:50px;">Unzählige Mails im Postfach und bereits die Übersicht verloren</h3>
+								<img style="margin-bottom:20px;" src="img/2020.png">
+								<p>Vielleicht kommt dir dieses Bild bekannt vor. Ein Postfach, voller E-Mails, welche man schon lange sortieren oder löschen wollte.
+								Vieles davon ist wahrscheinlich Spam, den man gar nicht erhalten möchte. Das Bereinigen wird aufgeschoben, da die Mails nicht den eigenen Speicherplatz belegen.
+								Wo liegen jedoch diese Mails? - Meist im pro E-Mail-Adresse reservierten Postfach-Speicherplatz von 5-50GB. Irgendwo in Dublin, Frankfurt oder in einem der anderen
+								unzähligen Rechenzentren von Google, Microsoft oder GMX auf der ganzen Welt, läuft ein Server, auf dem deine Mails gespeichert werden. - 24/7 Abrufbereit. Dabei wird ständig Energie gefressen.
+								Es lohnt sich also, das Postfach aufzuräumen. Dies erleichtert nicht nur das Organisieren sondern verringert auch den Stromverbrauch der Datacenter. <br><br>
+								Übrigens: Bei Werbemails/Newslettern und anderen Massenmails befindet sich meist ganz unten im Kleingedruckten ein Link zum Abmelden der eigenen E-Mail-Adresse vom Verteiler. Damit kann man
+								die eingehenden Spam-Mails erheblich reduzieren.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Info modal Cloud -->
+    <div class="portfolio-modal modal fade" id="portfolioModalcloud" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" id="gameModul">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+                </button>
+                <div class="modal-body text-center" >
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- Portfolio Modal - Title -->
+
+								<h1>Die Daten im Nebel</h1>
+								<h3 style="margin-bottom:50px;">Mit undurchsichtigem Energieverbrauch</h3>
+								<p>Es werden auf der Seite Pornhub laut ihren eigenen Angaben <b>jährlich ca. 100 Billionen Videos </b> angeschaut.
+								Auf die ganze Weltbevölkerung heruntergerechnet wären das folglich <b>12,5 Pornoclips pro Person.</b> <br>
+								Die übermittelte Datenmenge soll dadurch pro Person in etwa ein halbes Gigabyte betragen. Im durchschnitt verursacht der 
+								Energieaufwand zur Übermittlung dieser Datenmenge 3.5 Kilogramm CO2. <br><br> 
+								Wusstest du, dass im Jahr 2018 <b>0.2% der weltweiten Emissionen</b> durch online Videos mit pornografischem Inhalt entstanden? <br>
+								Ausserdem machen diese Filmchen <b>27 Prozent aller online Videos</b> aus!
+								Jedem seinen Spass, jedoch sollte man sich über die Folgen im Klaren sein.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+</div>
+
 </body>
 </html>
