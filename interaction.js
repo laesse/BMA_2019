@@ -28,14 +28,16 @@ function interact(x, y, scene) {
 
 function displayQuestion(q, scene) {
   // scene.add.rexRoundRectangle(10, 400, 630, 150, 5, 0xede76b);
-  scene.make.text({
-      x: 20, y: 410,
-      text: q.question,
-      stlye: {
-          font: "bold 10px Consolas",
-          fill: "black",
-          wordWrap: {width: 610},
-          align: 'center', 
-      }
-  })
+  scene.dialogPlugin.init()
+  console.log("test")
+//   scene.make.text({
+//       x: 20, y: 410,
+//       text: q.question,
+//       stlye: {
+//           font: "bold 10px Consolas",
+//           fill: "black",
+//           wordWrap: {width: 610},
+//           align: 'center', 
+//       }
+//   })
 }
