@@ -3,7 +3,7 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
     constructor() {
-        super({key: "Example1"})
+        super({key: "Bedroom"})
     }
 
     preload() {
@@ -14,6 +14,7 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
+        this.load.tilemapTiledJSON('shop', 'assets/shop.json');
 
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
@@ -92,6 +93,8 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
+            this.scene.start('Shop');
+
         }
 
     }

@@ -9,12 +9,13 @@ var config = {
             gravity: {y: 0}
         }
     },
-    scene: [ Bedroom ],
+    scene: [ Bedroom ,Shop],
     extend: {
         moveKeys: null,
         player: null,
         interactionKey : null
     },
+
 
 };
 
