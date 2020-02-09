@@ -12,7 +12,7 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-eventemitter3@^3.1.0:
+eventemitter3@^3.1.0, eventemitter3@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
   integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
@@ -54,10 +54,20 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
+lokijs@^1.5.7:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.8.tgz#9296f288edb2147389ec692fc972c428c59179d1"
+  integrity sha512-D8E3TBrY35o1ELnonp2MF8b3wKu2tVNl2TqRjvS+95oPMMe7OoIAxNY1qr+5BEZwnWn2V4ErAjVt000DonM+FA==
+
 minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
+
+papaparse@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/papaparse/-/papaparse-4.6.3.tgz#742e5eaaa97fa6c7e1358d2934d8f18f44aee781"
+  integrity sha512-LRq7BrHC2kHPBYSD50aKuw/B/dGcg29omyJbKWY3KsYUZU69RKwaBHu13jGmCYBtOc4odsLCrFyk6imfyNubJQ==
 
 path@^0.12.7:
   version "0.12.7"
@@ -66,6 +76,16 @@ path@^0.12.7:
   dependencies:
     process "^0.11.1"
     util "^0.10.3"
+
+phaser3-rex-plugins@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/phaser3-rex-plugins/-/phaser3-rex-plugins-1.1.8.tgz#5d89570b4fb11d3959a7ea203192066e7ead852a"
+  integrity sha512-n6bhes2IYPPaccTbksPSawqw8bc+/2VFwTCBttSsFPDoH8MNsOp3PnUbnuJku+/E/jc5bwEkxo3Jl9/O3So4Xg==
+  dependencies:
+    eventemitter3 "^3.1.2"
+    lokijs "^1.5.7"
+    papaparse "^4.6.3"
+    webfontloader "^1.6.28"
 
 phaser@3.20.1:
   version "3.20.1"
@@ -98,3 +118,8 @@ util@^0.10.3:
   integrity sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
   dependencies:
     inherits "2.0.3"
+
+webfontloader@^1.6.28:
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
+  integrity sha1-23hhKSU8tujq5UwvsF+HCvZnW64=

@@ -14,7 +14,7 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapD.json');
-        this.load.tilemapTiledJSON('shop', 'assets/shopB.json');
+        this.load.tilemapTiledJSON('shop', 'assets/shopC.json');
 
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
@@ -93,6 +93,7 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
+            this.scene.switch('TvDialog');
 
         }
 
