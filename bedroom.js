@@ -13,8 +13,8 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
-        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
-        this.load.tilemapTiledJSON('shop', 'assets/shop.json');
+        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapD.json');
+        this.load.tilemapTiledJSON('shop', 'assets/shopB.json');
 
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
@@ -93,10 +93,12 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
-            this.scene.start('Shop');
 
         }
 
+        if(this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64){
+            this.scene.start('Shop');
+        }
     }
 
     changeFrame(number, number2) {
