@@ -13,7 +13,6 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.plugin('DialogModalPlugin', './dialog_plugin.js');
-        this.load.tilemapTiledJSON('bedroom', 'assets/bma-map.json');
         this.load.image('gameTiles6', 'assets/pc.png');
         this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
 
