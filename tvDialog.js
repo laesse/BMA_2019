@@ -15,6 +15,8 @@ class TvDialog extends Phaser.Scene {
 
 
     create() {
+
+
         var dialog = this.rexUI.add.dialog({
             x: 325,
             y: 325,
@@ -65,17 +67,29 @@ class TvDialog extends Phaser.Scene {
         this.print = this.add.text(0, 0, '');
         dialog
             .on('button.click', function (button, groupName, index) {
-                this.print.text += index + ': ' + button.text + '\n';
-            }, this)
+                console.log(index + ': ' + button.text + '\n');
+                this.scene.stop('TvDialog');
+                this.answerTVCorrect();
+            }, this )
             .on('button.over', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle(1, 0x000000);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();
             });
+
+
     }
 
-    update() { }
+    answerTVCorrect(){
+        this.score = 10;
+        console.log(this.score);
+    }
+
+    update() {
+
+
+    }
 }
 
 var createLabel = function (scene, text, backgroundColor) {

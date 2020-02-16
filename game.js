@@ -14,7 +14,7 @@ var config = {
         moveKeys: null,
         player: null,
         interactionKey : null,
-
+        score: null,
     },
 
 

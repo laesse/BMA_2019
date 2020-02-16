@@ -1,6 +1,7 @@
 class Bedroom extends Phaser.Scene {
     currentAnim;
     timeSinceLastChange;
+    scoreTotal;
 
     constructor() {
         super({key: "Bedroom"})
@@ -58,6 +59,7 @@ class Bedroom extends Phaser.Scene {
 
         this.currentAnim = 0;
         this.timeSinceLastChange = this.time.now;
+        this.scoreTotal = 0;
     }
 
     update(time, delta) {
@@ -93,7 +95,7 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
-            this.scene.switch('TvDialog');
+            this.scene.run('TvDialog');
 
         }
 
@@ -116,4 +118,6 @@ class Bedroom extends Phaser.Scene {
         }
 
     }
+totalScore() {
+}
 }
