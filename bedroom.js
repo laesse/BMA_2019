@@ -15,8 +15,9 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
-        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapD.json');
-        this.load.tilemapTiledJSON('shop', 'assets/shopC.json');
+        this.load.image('gameTiles7', 'assets/ps.png');
+        this.load.tilemapTiledJSON('bedroom', 'assets/bedroom.json');
+        this.load.tilemapTiledJSON('shop', 'assets/shop_map.json');
 
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
@@ -41,9 +42,9 @@ class Bedroom extends Phaser.Scene {
         const tileset4 = this.map.addTilesetImage('BMA-Game', 'gameTiles4');
         const tileset5 = this.map.addTilesetImage('tv', 'gameTiles5');
         const tileset6 = this.map.addTilesetImage('pc', 'gameTiles6');
-        this.bottomLayer = this.map.createStaticLayer('Floor layer', [tileset4, tileset2, tileset3, tileset1]);
+        this.bottomLayer = this.map.createStaticLayer('Floor layer', [tileset4, tileset2, tileset3, tileset1, tileset5, tileset6]);
         this.middleLayer1 = this.map.createStaticLayer('carpet', [tileset4, tileset2, tileset3, tileset1, tileset6]);
-        this.middleLayer2 = this.map.createDynamicLayer('edge', [tileset4, tileset2, tileset3, tileset1]);
+        this.middleLayer2 = this.map.createDynamicLayer('edge', [tileset4, tileset2, tileset3, tileset1, tileset5, tileset6]);
         this.topLayer = this.map.createDynamicLayer('blocked', [tileset4, tileset2, tileset3, tileset1, tileset5, tileset6]);
         // Character
         this.player = this.physics.add.sprite(325, 325, "player1", 0);
