@@ -1,7 +1,7 @@
 class Bedroom extends Phaser.Scene {
     currentAnim;
     timeSinceLastChange;
-    scoreTotal;
+    score = 0;
 
     constructor() {
         super({key: "Bedroom"})
@@ -32,6 +32,7 @@ class Bedroom extends Phaser.Scene {
 
 
     create() {
+
         this.map = this.add.tilemap('bedroom');
         const tileset1 = this.map.addTilesetImage('int3', 'gameTiles1');
         const tileset2 = this.map.addTilesetImage('interieor2', 'gameTiles2');
@@ -63,6 +64,7 @@ class Bedroom extends Phaser.Scene {
     }
 
     update(time, delta) {
+        console.log('Score:'+this.score);
         //charactermovment
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
@@ -95,7 +97,7 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
-            this.scene.run('TvDialog');
+            this.scene.run('TvDialog', this.score);
 
         }
 
@@ -118,6 +120,5 @@ class Bedroom extends Phaser.Scene {
         }
 
     }
-totalScore() {
-}
+
 }
