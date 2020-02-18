@@ -1,7 +1,8 @@
 class Bedroom extends Phaser.Scene {
     currentAnim;
     timeSinceLastChange;
-    score = 0;
+
+
 
     constructor() {
         super({key: "Bedroom"})
@@ -64,7 +65,6 @@ class Bedroom extends Phaser.Scene {
     }
 
     update(time, delta) {
-        console.log('Score:'+this.score);
         //charactermovment
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
@@ -121,4 +121,10 @@ class Bedroom extends Phaser.Scene {
 
     }
 
+
+}
+var score = 0;
+function answerCorrect(){
+    score += 10;
+    console.log(score);
 }

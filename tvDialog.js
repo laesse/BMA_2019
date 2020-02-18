@@ -15,7 +15,6 @@ class TvDialog extends Phaser.Scene {
 
 
     create() {
-        this.score;
         var dialog = this.rexUI.add.dialog({
             x: 325,
             y: 325,
@@ -68,7 +67,7 @@ class TvDialog extends Phaser.Scene {
             .on('button.click', function (button, groupName, index, score) {
                 console.log(index + ': ' + button.text + '\n');
                 if (index === 0){
-
+                    answerCorrect();
                 }
                 this.scene.stop('TvDialog');
             }, this )
