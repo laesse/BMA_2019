@@ -2,8 +2,10 @@ class Bedroom extends Phaser.Scene {
     currentAnim;
     timeSinceLastChange;
 
+
+
     constructor() {
-        super({key: "Example1"})
+        super({key: "Bedroom"})
     }
 
     preload() {
@@ -13,7 +15,8 @@ class Bedroom extends Phaser.Scene {
         this.load.image('gameTiles4', 'assets/tiles.png');
         this.load.image('gameTiles5', 'assets/tv.png');
         this.load.image('gameTiles6', 'assets/pc.png');
-        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapC.json');
+        this.load.tilemapTiledJSON('bedroom', 'assets/bma-mapD.json');
+        this.load.tilemapTiledJSON('shop', 'assets/shopC.json');
 
         this.load.spritesheet('player1',
             'assets/playerspriteblue.png',
@@ -30,6 +33,7 @@ class Bedroom extends Phaser.Scene {
 
 
     create() {
+
         this.map = this.add.tilemap('bedroom');
         const tileset1 = this.map.addTilesetImage('int3', 'gameTiles1');
         const tileset2 = this.map.addTilesetImage('interieor2', 'gameTiles2');
@@ -57,6 +61,7 @@ class Bedroom extends Phaser.Scene {
 
         this.currentAnim = 0;
         this.timeSinceLastChange = this.time.now;
+        this.scoreTotal = 0;
     }
 
     update(time, delta) {
@@ -92,8 +97,13 @@ class Bedroom extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             //TODO AddAction
+            this.scene.run('TvDialog', this.score);
+
         }
 
+        if(this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64){
+            this.scene.start('Shop');
+        }
     }
 
     changeFrame(number, number2) {
@@ -110,4 +120,11 @@ class Bedroom extends Phaser.Scene {
         }
 
     }
+
+
+}
+var score = 0;
+function answerCorrect(){
+    score += 10;
+    console.log(score);
 }
