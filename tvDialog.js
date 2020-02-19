@@ -64,7 +64,7 @@ class TvDialog extends Phaser.Scene {
 
         this.print = this.add.text(0, 0, '');
         dialog
-            .on('button.click', function (button, groupName, index, score) {
+            .on('button.click', function (button, groupName, index) {
                 console.log(index + ': ' + button.text + '\n');
                 if (index === 0){
                     answerCorrect();
