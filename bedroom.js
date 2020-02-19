@@ -108,7 +108,7 @@ class Bedroom extends Phaser.Scene {
 
         }
 
-        if (this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 164) {
+        if (this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64) {
             this.scene.start('Shop');
         }
     }
