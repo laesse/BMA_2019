@@ -3,7 +3,6 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
 
-
     constructor() {
         super({key: "Bedroom"})
     }
@@ -68,6 +67,7 @@ class Bedroom extends Phaser.Scene {
 
     update(time, delta) {
         //charactermovment
+
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
 
@@ -97,13 +97,18 @@ class Bedroom extends Phaser.Scene {
 
         }
 
+
         if (this.interactionKey.SPACE.isDown) {
-            //TODO AddAction
-            this.scene.run('TvDialog', this.score);
+
+
+            if (this.player.body.x < 190 && this.player.body.x > 120 && this.player.body.y === 416) {
+                console.log("true")
+                this.scene.run('pcBedroomDialog', this.score);
+            }
 
         }
 
-        if(this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64){
+        if (this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64) {
             this.scene.start('Shop');
         }
     }
@@ -125,16 +130,19 @@ class Bedroom extends Phaser.Scene {
 
 
 }
+
 var score = 0;
-function answerCorrect(){
+
+function answerCorrect() {
     score += 10;
     console.log(score);
     updateProgress();
-    if(score === document.getElementById("progressBar").max){
-      this.scene.stop("Bedroom");
+    if (score === document.getElementById("progressBar").max) {
+        this.scene.stop("Bedroom");
     }
 
 }
-function updateProgress(){
-  document.getElementById("progressBar").value = score;
+
+function updateProgress() {
+    document.getElementById("progressBar").value = score;
 }

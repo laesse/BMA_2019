@@ -9,7 +9,7 @@ var config = {
             gravity: {y: 0}
         }
     },
-    scene: [ Bedroom ,Shop, TvDialog],
+    scene: [ Bedroom ,Shop, TvDialog, pcBedroomDialog],
     extend: {
         moveKeys: null,
         player: null,
