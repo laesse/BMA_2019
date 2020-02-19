@@ -129,4 +129,12 @@ var score = 0;
 function answerCorrect(){
     score += 10;
     console.log(score);
+    updateProgress();
+    if(score === document.getElementById("progressBar").max){
+      this.scene.stop("Bedroom");
+    }
+
+}
+function updateProgress(){
+  document.getElementById("progressBar").value = score;
 }
