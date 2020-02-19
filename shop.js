@@ -8,8 +8,12 @@ class Shop extends Phaser.Scene {
     create(){
         this.map = this.add.tilemap('shop');
         const tileset3 = this.map.addTilesetImage('interior', 'gameTiles3');
-        this.bottomLayer = this.map.createStaticLayer('floor', [tileset3]);
-        this.shopEdgeLayer = this.map.createDynamicLayer('edge', [tileset3]);
+        const tileset7 = this.map.addTilesetImage('ps', 'gameTiles7');
+        const tileset6 = this.map.addTilesetImage('pc', 'gameTiles6');
+        this.bottomLayer = this.map.createStaticLayer('floor', [tileset3, tileset7, tileset6]);
+        this.shopEdgeLayer = this.map.createDynamicLayer('edge', [tileset3, tileset7,tileset6]);
+        this.shopEdgeLayer = this.map.createDynamicLayer('blocked', [tileset3, tileset7,tileset6]);
+        this.shopEdgeLayer = this.map.createDynamicLayer('furn', [tileset3, tileset7,tileset6]);
         this.player = this.physics.add.sprite(325, 325, "player1", 0);
         this.moveKeys = this.input.keyboard.addKeys('W,S,A,D,UP,DOWN,LEFT,RIGHT,cursor');
         this.interactionKey = this.input.keyboard.addKeys('SPACE');
