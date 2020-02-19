@@ -11,9 +11,10 @@ class Shop extends Phaser.Scene {
         const tileset7 = this.map.addTilesetImage('ps', 'gameTiles7');
         const tileset6 = this.map.addTilesetImage('pc', 'gameTiles6');
         this.bottomLayer = this.map.createStaticLayer('floor', [tileset3, tileset7, tileset6]);
+        this.floorLayer = this.map.createDynamicLayer('floor2', [tileset3, tileset7, tileset6]);
         this.shopEdgeLayer = this.map.createDynamicLayer('edge', [tileset3, tileset7,tileset6]);
-        this.shopEdgeLayer = this.map.createDynamicLayer('blocked', [tileset3, tileset7,tileset6]);
-        this.shopEdgeLayer = this.map.createDynamicLayer('furn', [tileset3, tileset7,tileset6]);
+        this.blockedLayer = this.map.createDynamicLayer('blocked', [tileset3, tileset7,tileset6]);
+        this.shopFurnLayer = this.map.createDynamicLayer('furn', [tileset3, tileset7,tileset6]);
         this.player = this.physics.add.sprite(325, 325, "player1", 0);
         this.moveKeys = this.input.keyboard.addKeys('W,S,A,D,UP,DOWN,LEFT,RIGHT,cursor');
         this.interactionKey = this.input.keyboard.addKeys('SPACE');
@@ -21,8 +22,14 @@ class Shop extends Phaser.Scene {
         this.timeSinceLastChange = this.time.now;
 
         this.shopEdgeLayer.setCollisionByProperty({collides: true});
+        this.blockedLayer.setCollisionByProperty({collides: true});
+        this.shopFurnLayer.setCollisionByProperty({collides: true});
         this.shopEdgeLayer.setCollisionBetween(1, 9999);
+        this.blockedLayer.setCollisionBetween(1, 9999);
+        this.shopFurnLayer.setCollisionBetween(1, 9999);
         this.physics.add.collider(this.player, this.shopEdgeLayer);
+        this.physics.add.collider(this.player, this.blockedLayer);
+        this.physics.add.collider(this.player, this.shopFurnLayer);
 
         this.player.body.collideWorldBounds = true;
     }
