@@ -112,8 +112,7 @@ class Bedroom extends Phaser.Scene {
                 console.log("tv")
                 this.scene.run('TvDialog', this.score);
             } else {
-                console.log(this.player.body.x);
-                console.log(this.player.body.y);
+               
                 console.log("alexa")
                 this.scene.run('alexaDialog', this.score);
             }
