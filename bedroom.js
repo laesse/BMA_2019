@@ -101,8 +101,6 @@ class Bedroom extends Phaser.Scene {
         if (this.interactionKey.SPACE.isDown) {
 
 
-            //TODO AddAction
-            // this.scene.run('TvDialog', this.score);
             if (this.player.body.x < 190 && this.player.body.x > 120 && this.player.body.y === 416) {
                 console.log("true")
                 this.scene.run('pcBedroomDialog', this.score);

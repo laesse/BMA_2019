@@ -24,7 +24,7 @@ class pcBedroomDialog extends Phaser.Scene {
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
                 text: this.add.text(0, 0, 'Welcher Dienst verursacht ca 0.2% der weltweiten jährlichen CO2-Emissionen?', {
-                    fontSize: '24px',
+                    fontSize: '12px',
                     color: 'black'
                 }),
                 space: {
