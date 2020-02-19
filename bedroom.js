@@ -104,7 +104,12 @@ class Bedroom extends Phaser.Scene {
             if (this.player.body.x < 190 && this.player.body.x > 120 && this.player.body.y === 416) {
                 console.log("pc")
                 this.scene.run('pcBedroomDialog', this.score);
+            } else if (this.player.body.x < 360 && this.player.body.x > 280 && this.player.body.y > 40 && this.player.body.y < 100) {
+                console.log("radio")
+                this.scene.run('radioDialog', this.score);
             } else {
+                console.log(this.player.body.x);
+                console.log(this.player.body.y);
                 console.log("alexa")
                 this.scene.run('alexaDialog', this.score);
             }
