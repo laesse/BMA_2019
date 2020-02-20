@@ -3,6 +3,7 @@ class Bedroom extends Phaser.Scene {
     timeSinceLastChange;
 
 
+
     constructor() {
         super({key: "Bedroom"})
     }
@@ -67,7 +68,6 @@ class Bedroom extends Phaser.Scene {
 
     update(time, delta) {
         //charactermovment
-
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
 
@@ -101,17 +101,22 @@ class Bedroom extends Phaser.Scene {
         if (this.interactionKey.SPACE.isDown) {
 
             if (this.player.body.x < 190 && this.player.body.x > 120 && this.player.body.y === 416) {
-                console.log("pc")
+                console.log("pc");
                 this.scene.run('pcBedroomDialog', this.score);
             } else if (this.player.body.x < 360 && this.player.body.x > 280 && this.player.body.y > 40 && this.player.body.y < 100) {
-                console.log("radio")
+                console.log("radio");
                 this.scene.run('radioDialog', this.score);
             } else if (this.player.body.x === 512 && this.player.body.y > 110 && this.player.body.y < 155) {
-                console.log("tv")
+                console.log("tv");
                 this.scene.run('TvDialog', this.score);
-            } else {
+            }
+            else if (this.player.body.x === 480 && this.player.body.y > 203 && this.player.body.y < 248){
+                console.log("console");
+                this.scene.run('ConsoleDialog' ,this.score);
+            }
+            else {
 
-                console.log("alexa")
+                console.log("alexa");
                 this.scene.run('alexaDialog', this.score);
             }
 

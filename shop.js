@@ -69,7 +69,7 @@ class Shop extends Phaser.Scene {
 
         if (this.interactionKey.SPACE.isDown) {
             if (this.player.body.x < 350 && this.player.body.x > 270 && this.player.body.y === 480) {
-                console.log("pcshop")
+                console.log("pcshop");
                 this.scene.run('pcShopDialog', this.score);
             }
 
