@@ -23,8 +23,8 @@ class alexaDialog extends Phaser.Scene {
 
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
-                text: this.add.text(0, 0, 'Du willst soviel CO2 sparen wie möglich, \n welche Option ist für die Umwelt die Bessere?', {
-                    fontSize: '12px',
+                text: this.add.text(0, 0, 'Du willst soviel CO2 sparen \nwie möglich, welche Option ist \nfür die Umwelt die Bessere?', {
+                    fontSize: '24px',
                     color: 'black'
                 }),
                 space: {
@@ -70,7 +70,7 @@ class alexaDialog extends Phaser.Scene {
                 this.scene.stop('alexaDialog');
             }, this )
             .on('button.over', function (button, groupName, index) {
-                button.getElement('background').setStrokeStyle(1, 0x000000);
+                button.getElement('background').setStrokeStyle(1, 0xffffff);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();

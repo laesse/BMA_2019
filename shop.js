@@ -41,7 +41,18 @@ class Shop extends Phaser.Scene {
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
 
-
+        if (score === 90){
+            this.scene.stop('bedDialog');
+            this.scene.stop('shopRadioDialog');
+            this.scene.stop('serverDialog');
+            this.scene.stop('pcBedroomDialog');
+            this.scene.stop('alexaDialog');
+            this.scene.stop('pcShopDialog');
+            this.scene.stop('radioDialog');
+            this.scene.stop('consoleDialog');
+            this.scene.stop('tvDialog');
+            this.scene.start('endDialog', this.score);
+        }
         if (this.moveKeys.W.isDown || this.moveKeys.UP.isDown) {
             this.changeFrame(0, 2);
             this.player.setFrame(this.currentAnim);
@@ -71,6 +82,20 @@ class Shop extends Phaser.Scene {
             if (this.player.body.x < 350 && this.player.body.x > 270 && this.player.body.y === 480) {
                 console.log("pcshop");
                 this.scene.run('pcShopDialog', this.score);
+            }
+
+        }
+        if (this.interactionKey.SPACE.isDown) {
+            if (this.player.body.x > 506 && this.player.body.x < 576 && this.player.body.y === 64) {
+                console.log("server");
+                this.scene.run('serverDialog', this.score);
+            }
+
+        }
+        if (this.interactionKey.SPACE.isDown) {
+            if (this.player.body.x > 276 && this.player.body.x < 301 && this.player.body.y === 64) {
+                console.log("shopRadio");
+                this.scene.run('shopRadioDialog', this.score);
             }
 
         }

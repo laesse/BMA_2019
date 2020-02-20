@@ -23,15 +23,22 @@ class consoleDialog extends Phaser.Scene {
 
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
-                text: this.add.text(0, 0, 'Wo möchten sie ihren Spielstand speichern??', {
+                text: this.add.text(0, 0, 'Wo möchten sie ihren \nSpielstand speichern??', {
+
                     fontSize: '24px',
                     color: 'black'
                 }),
                 space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
+                    title: 25,
+                    content: 25,
+                    choice: 15,
+
+                    left: 25,
+                    right: 25,
+                    top: 25,
+                    bottom: 25,
+
+
                 }
             }),
 
@@ -68,10 +75,10 @@ class consoleDialog extends Phaser.Scene {
                 if (index === 1){
                     answerCorrect();
                 }
-                this.scene.stop('ConsoleDialog');
+                this.scene.stop('consoleDialog');
             }, this )
             .on('button.over', function (button, groupName, index) {
-                button.getElement('background').setStrokeStyle(1, 0x000000);
+                button.getElement('background').setStrokeStyle(1, 0xffffff);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();

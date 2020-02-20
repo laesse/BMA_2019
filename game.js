@@ -19,6 +19,10 @@ config = {
 		radioDialog,
 		pcShopDialog,
 		consoleDialog,
+		serverDialog,
+		shopRadioDialog,
+		bedDialog,
+		endDialog,
 	],
 	extend:  {
 		moveKeys:       null,

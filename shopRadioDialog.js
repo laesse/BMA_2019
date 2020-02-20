@@ -1,7 +1,7 @@
-class TvDialog extends Phaser.Scene {
+class shopRadioDialog extends Phaser.Scene {
     constructor() {
         super({
-            key: 'TvDialog'
+            key: 'shopRadioDialog'
         })
     }
 
@@ -23,22 +23,29 @@ class TvDialog extends Phaser.Scene {
 
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
-                text: this.add.text(0, 0, 'Was möchten Sie sich ansehen?', {
+                text: this.add.text(0, 0, 'Möchten Sie ihre meist-gehörten \nSongs herunterladen?', {
+
                     fontSize: '24px',
                     color: 'black'
                 }),
                 space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
+                    title: 25,
+                    content: 25,
+                    choice: 15,
+
+                    left: 25,
+                    right: 25,
+                    top: 25,
+                    bottom: 25,
+
+
                 }
             }),
 
             choices: [
-                createLabel(this, 'SRF'),
-                createLabel(this, 'Netflix'),
-                createLabel(this, 'Amazon Prime'),
+                createLabel(this, 'Ja'),
+                createLabel(this, 'Nein'),
+
 
             ],
 
@@ -69,7 +76,7 @@ class TvDialog extends Phaser.Scene {
                 if (index === 0){
                     answerCorrect();
                 }
-                this.scene.stop('TvDialog');
+                this.scene.stop('shopRadioDialog');
             }, this )
             .on('button.over', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle(1, 0xffffff);

@@ -72,7 +72,7 @@ class radioDialog extends Phaser.Scene {
                 this.scene.stop('radioDialog');
             }, this )
             .on('button.over', function (button, groupName, index) {
-                button.getElement('background').setStrokeStyle(1, 0x000000);
+                button.getElement('background').setStrokeStyle(1, 0xffffff);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();
