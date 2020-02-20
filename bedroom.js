@@ -63,7 +63,6 @@ class Bedroom extends Phaser.Scene {
 
         this.currentAnim = 0;
         this.timeSinceLastChange = this.time.now;
-        this.scoreTotal = 0;
     }
 
     update(time, delta) {
@@ -71,6 +70,18 @@ class Bedroom extends Phaser.Scene {
         this.player.body.velocity.y = 0;
         this.player.body.velocity.x = 0;
 
+        if (score === 90){
+            this.scene.stop('bedDialog');
+            this.scene.stop('shopRadioDialog');
+            this.scene.stop('serverDialog');
+            this.scene.stop('pcBedroomDialog');
+            this.scene.stop('alexaDialog');
+            this.scene.stop('pcShopDialog');
+            this.scene.stop('radioDialog');
+            this.scene.stop('consoleDialog');
+            this.scene.stop('tvDialog');
+            this.scene.start('endDialog', this.score);
+        }
 
         if (this.moveKeys.W.isDown || this.moveKeys.UP.isDown) {
             this.changeFrame(0, 2);
@@ -112,7 +123,23 @@ class Bedroom extends Phaser.Scene {
             }
             else if (this.player.body.x === 480 && this.player.body.y > 203 && this.player.body.y < 248){
                 console.log("console");
-                this.scene.run('ConsoleDialog' ,this.score);
+                this.scene.run('consoleDialog' ,this.score);
+            }
+            else if (this.player.body.x > 441 && this.player.body.x < 490 && this.player.body.y === 380){
+                console.log("bed");
+                this.scene.run('bedDialog' ,this.score);
+            }
+            else if (this.player.body.y > 405 && this.player.body.y < 443 && this.player.body.x === 416){
+                console.log("bed");
+                this.scene.run('bedDialog' ,this.score);
+            }
+            else if (this.player.body.y > 403 && this.player.body.y < 447 && this.player.body.x === 512){
+                console.log("bed");
+                this.scene.run('bedDialog' ,this.score);
+            }
+            else if (this.player.body.x > 438 && this.player.body.x < 493 && this.player.body.y === 480){
+                console.log("bed");
+                this.scene.run('bedDialog' ,this.score);
             }
             else {
 
@@ -121,6 +148,7 @@ class Bedroom extends Phaser.Scene {
             }
 
         }
+
 
         if (this.player.body.x < 102 && this.player.body.x > 55 && this.player.body.y === 64) {
             this.scene.start('Shop');

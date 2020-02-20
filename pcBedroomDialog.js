@@ -23,8 +23,8 @@ class pcBedroomDialog extends Phaser.Scene {
 
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
-                text: this.add.text(0, 0, 'Welcher Dienst verursacht ca 0.2% der weltweiten jährlichen CO2-Emissionen?', {
-                    fontSize: '12px',
+                text: this.add.text(0, 0, 'Welcher Dienst verursacht \nca 0.2% der weltweiten jährlichen \nCO2-Emissionen?', {
+                    fontSize: '24px',
                     color: 'black'
                 }),
                 space: {
@@ -70,7 +70,7 @@ class pcBedroomDialog extends Phaser.Scene {
                 this.scene.stop('pcBedroomDialog');
             }, this )
             .on('button.over', function (button, groupName, index) {
-                button.getElement('background').setStrokeStyle(1, 0x000000);
+                button.getElement('background').setStrokeStyle(1, 0xffffff);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();

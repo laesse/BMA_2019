@@ -1,7 +1,7 @@
-class TvDialog extends Phaser.Scene {
+class endDialog extends Phaser.Scene {
     constructor() {
         super({
-            key: 'TvDialog'
+            key: 'endDialog'
         })
     }
 
@@ -23,23 +23,27 @@ class TvDialog extends Phaser.Scene {
 
             title: this.rexUI.add.label({
                 background: this.rexUI.add.roundRectangle(0, 0, 100, 40, 20, 0xffffff),
-                text: this.add.text(0, 0, 'Was möchten Sie sich ansehen?', {
+                text: this.add.text(0, 0, 'Vielen Dank, dass Sie \nunser Spiel gespielt haben!', {
+
                     fontSize: '24px',
                     color: 'black'
                 }),
                 space: {
-                    left: 15,
-                    right: 15,
-                    top: 10,
-                    bottom: 10
+                    title: 25,
+                    content: 25,
+                    choice: 15,
+
+                    left: 25,
+                    right: 25,
+                    top: 25,
+                    bottom: 25,
+
+
                 }
             }),
 
             choices: [
-                createLabel(this, 'SRF'),
-                createLabel(this, 'Netflix'),
-                createLabel(this, 'Amazon Prime'),
-
+                createLabel(this, 'Spiel beenden')
             ],
 
             space: {
@@ -65,11 +69,7 @@ class TvDialog extends Phaser.Scene {
         this.print = this.add.text(0, 0, '');
         dialog
             .on('button.click', function (button, groupName, index) {
-                console.log(index + ': ' + button.text + '\n');
-                if (index === 0){
-                    answerCorrect();
-                }
-                this.scene.stop('TvDialog');
+              location.reload();
             }, this )
             .on('button.over', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle(1, 0xffffff);

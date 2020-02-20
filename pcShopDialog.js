@@ -36,7 +36,7 @@ class pcShopDialog extends Phaser.Scene {
             }),
 
             choices: [
-                createLabel(this, 'Die Mails löschen und wo möglich deabonieren'),
+                createLabel(this, 'Die Mails löschen und \nwo möglich deabonieren'),
                 createLabel(this, 'Alle Löschen')
 
             ],
@@ -71,7 +71,7 @@ class pcShopDialog extends Phaser.Scene {
                 this.scene.stop('pcShopDialog');
             }, this)
             .on('button.over', function (button, groupName, index) {
-                button.getElement('background').setStrokeStyle(1, 0x000000);
+                button.getElement('background').setStrokeStyle(1, 0xffffff);
             })
             .on('button.out', function (button, groupName, index) {
                 button.getElement('background').setStrokeStyle();
